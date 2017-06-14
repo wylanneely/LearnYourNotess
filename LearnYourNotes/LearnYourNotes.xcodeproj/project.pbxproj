@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B232A1F91EEF9C2E00725909 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B232A1F81EEF9C2E00725909 /* SoundController.swift */; };
 		B25501551E9807A5007C3FBA /* GameplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25501541E9807A5007C3FBA /* GameplayKit.framework */; };
+		B271AE281EF03F3200ED1BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B271AE271EF03F3200ED1BD5 /* Main.storyboard */; };
 		B28878EF1E944D80002A829E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28878EE1E944D80002A829E /* AppDelegate.swift */; };
 		B28878F61E944D80002A829E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28878F51E944D80002A829E /* Assets.xcassets */; };
 		B28878F91E944D80002A829E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28878F71E944D80002A829E /* LaunchScreen.storyboard */; };
@@ -26,13 +27,13 @@
 		B28879171E945C8C002A829E /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = B288790B1E945C8C002A829E /* g.wav */; };
 		B288791B1E94623C002A829E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B288791A1E94623C002A829E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B288791E1E9462E3002A829E /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288791D1E9462E3002A829E /* AudioViewController.swift */; };
-		B2EB7CD31EEF385800FFE554 /* SoundStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB7CD21EEF385800FFE554 /* SoundStruct.swift */; };
+		B2EB7CD31EEF385800FFE554 /* SoundFilePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB7CD21EEF385800FFE554 /* SoundFilePaths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B232A1F71EEF9BE300725909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B232A1F81EEF9C2E00725909 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		B25501541E9807A5007C3FBA /* GameplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameplayKit.framework; path = System/Library/Frameworks/GameplayKit.framework; sourceTree = SDKROOT; };
+		B271AE271EF03F3200ED1BD5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B28878EB1E944D80002A829E /* LearnYourNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYourNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28878EE1E944D80002A829E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28878F51E944D80002A829E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +54,7 @@
 		B288791A1E94623C002A829E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B288791D1E9462E3002A829E /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		B288791F1E946BD3002A829E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B2EB7CD21EEF385800FFE554 /* SoundStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundStruct.swift; sourceTree = "<group>"; };
+		B2EB7CD21EEF385800FFE554 /* SoundFilePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFilePaths.swift; sourceTree = "<group>"; };
 		B2FE897A1E96F21400581768 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -98,7 +99,7 @@
 		B28878ED1E944D80002A829E /* LearnYourNotes */ = {
 			isa = PBXGroup;
 			children = (
-				B232A1F61EEF9BE300725909 /* Main.storyboard */,
+				B271AE271EF03F3200ED1BD5 /* Main.storyboard */,
 				B2FE897C1E96F26600581768 /* Model */,
 				B232A1F51EEF9BCF00725909 /* ModelControllers */,
 				B288791C1E946279002A829E /* View Controllers */,
@@ -152,7 +153,7 @@
 		B2FE897C1E96F26600581768 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2EB7CD21EEF385800FFE554 /* SoundStruct.swift */,
+				B2EB7CD21EEF385800FFE554 /* SoundFilePaths.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,6 +224,7 @@
 				B28879151E945C8C002A829E /* f.wav in Resources */,
 				B28879131E945C8C002A829E /* eflat.wav in Resources */,
 				B28878F91E944D80002A829E /* LaunchScreen.storyboard in Resources */,
+				B271AE281EF03F3200ED1BD5 /* Main.storyboard in Resources */,
 				B28879101E945C8C002A829E /* c.wav in Resources */,
 				B288790F1E945C8C002A829E /* csharp.wav in Resources */,
 				B28879141E945C8C002A829E /* fsharp.wav in Resources */,
@@ -243,7 +245,7 @@
 			files = (
 				B28878EF1E944D80002A829E /* AppDelegate.swift in Sources */,
 				B232A1F91EEF9C2E00725909 /* SoundController.swift in Sources */,
-				B2EB7CD31EEF385800FFE554 /* SoundStruct.swift in Sources */,
+				B2EB7CD31EEF385800FFE554 /* SoundFilePaths.swift in Sources */,
 				B288791E1E9462E3002A829E /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,14 +253,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B232A1F61EEF9BE300725909 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B232A1F71EEF9BE300725909 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B28878F71E944D80002A829E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

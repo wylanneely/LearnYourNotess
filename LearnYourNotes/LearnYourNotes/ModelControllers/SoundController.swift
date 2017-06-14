@@ -11,15 +11,11 @@ import AVFoundation
 
 struct SoundController {
     
-    let soundPath = SoundsFileStruct()
+    let soundPath = SoundFilePaths()
     
-    var soundPlayer:AVAudioPlayer = AVAudioPlayer()
-    
-    
-    
-    mutating func callEasyRandomSound() -> Int?{
+    mutating func callEasyRandomSound() -> Int? {
         
-        
+        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
         
         guard let gSoundPath = soundPath.gSoundPath,
             let fSoundPath = soundPath.fSoundPath,
@@ -41,12 +37,56 @@ struct SoundController {
         } catch {}
         
         return randomIndex
+    }
+    
+
+    mutating func callRandomSoundBy(noteIndex: Int) {
+        
+        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
+        
+        guard let gSoundPath = soundPath.gSoundPath,
+            let fSoundPath = soundPath.fSoundPath,
+            let eSoundPath = soundPath.eSoundPath,
+            let dSoundPath = soundPath.dSoundPath,
+            let cSoundPath = soundPath.cSoundPath,
+            let bSoundPath = soundPath.bSoundPath,
+            let ASoundPath = soundPath.ASoundPath else { print("error getting soundsFilePath"); return }
+        
+        let soundsArray = [ASoundPath,bSoundPath,cSoundPath,dSoundPath,eSoundPath,fSoundPath,gSoundPath]
+        
+        let randomSoundPath = soundsArray[noteIndex]
+        
+        do {
+            try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: randomSoundPath) as URL)
+            soundPlayer.play()
+        } catch {}
         
     }
     
-    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     mutating func callHardRandomSound(){
+        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
+
         
         guard let gSoundPath = soundPath.gSoundPath,
             let gSharpPath = soundPath.gSharpPath,
@@ -71,10 +111,9 @@ struct SoundController {
             try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: randomSoundPath) as URL)
             soundPlayer.play()
         } catch {}
-        
-        
     }
     
     
     
 }
+
