@@ -29,6 +29,7 @@ class AudioViewController: UIViewController {
             scoreLabel.text = "\(score)"
             backgroundView.backgroundColor = .red
         }
+        sounds.callRandomSoundBy(noteIndex: SoundIndex)
     }
     
         //MARK: - PlayActions
@@ -41,19 +42,15 @@ class AudioViewController: UIViewController {
     
     @IBAction func AbuttonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 0)
-        sounds.callRandomSoundBy(noteIndex: 0)
     }
     @IBAction func bButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 1)
-        sounds.callRandomSoundBy(noteIndex: 1)
     }
     @IBAction func cButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 2)
-        sounds.callRandomSoundBy(noteIndex: 2)
     }
     @IBAction func dButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 3)
-        sounds.callRandomSoundBy(noteIndex: 3)
     }
     @IBAction func eButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 4)
@@ -61,11 +58,9 @@ class AudioViewController: UIViewController {
     }
     @IBAction func fButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 5)
-        sounds.callRandomSoundBy(noteIndex: 5)
     }
     @IBAction func gButtonTapped(_ sender: Any) {
         addScoreifCorrectAt(SoundIndex: 6)
-        sounds.callRandomSoundBy(noteIndex: 6)
     }
     
     @IBOutlet weak var scoreLabel: UILabel!

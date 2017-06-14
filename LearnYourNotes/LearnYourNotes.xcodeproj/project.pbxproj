@@ -190,8 +190,13 @@
 				TargetAttributes = {
 					B28878EA1E944D80002A829E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6PHWN55R5A;
+						DevelopmentTeam = L4J4QU6QE4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -361,7 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PHWN55R5A;
+				DEVELOPMENT_TEAM = L4J4QU6QE4;
 				INFOPLIST_FILE = LearnYourNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wylan.LearnYourNotes;
@@ -374,7 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PHWN55R5A;
+				DEVELOPMENT_TEAM = L4J4QU6QE4;
 				INFOPLIST_FILE = LearnYourNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wylan.LearnYourNotes;

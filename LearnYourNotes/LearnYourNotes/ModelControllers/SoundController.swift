@@ -11,95 +11,70 @@ import AVFoundation
 
 struct SoundController {
     
-    let soundPath = SoundFilePaths()
+    let sound = SoundFilePaths()
+    var soundPlayer:AVAudioPlayer = AVAudioPlayer()
     
     mutating func callEasyRandomSound() -> Int? {
         
-        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
-        
-        guard let gSoundPath = soundPath.gSoundPath,
-            let fSoundPath = soundPath.fSoundPath,
-            let eSoundPath = soundPath.eSoundPath,
-            let dSoundPath = soundPath.dSoundPath,
-            let cSoundPath = soundPath.cSoundPath,
-            let bSoundPath = soundPath.bSoundPath,
-            let ASoundPath = soundPath.ASoundPath else { print("error getting soundsFilePath"); return(nil) }
+        guard let gSoundPath = sound.gSoundPath,
+            let fSoundPath = sound.fSoundPath,
+            let eSoundPath = sound.eSoundPath,
+            let dSoundPath = sound.dSoundPath,
+            let cSoundPath = sound.cSoundPath,
+            let bSoundPath = sound.bSoundPath,
+            let ASoundPath = sound.ASoundPath else { print("error getting soundsFilePath"); return(nil) }
         
         let soundsArray = [ASoundPath,bSoundPath,cSoundPath,dSoundPath,eSoundPath,fSoundPath,gSoundPath]
         
         let randomIndex = Int(arc4random_uniform(6))
-        
         let randomSoundPath = soundsArray[randomIndex]
         
         do {
-            try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: randomSoundPath) as URL)
+            try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: randomSoundPath) as URL, fileTypeHint: "wav")
             soundPlayer.play()
         } catch {}
         
         return randomIndex
     }
-    
+
 
     mutating func callRandomSoundBy(noteIndex: Int) {
         
-        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
-        
-        guard let gSoundPath = soundPath.gSoundPath,
-            let fSoundPath = soundPath.fSoundPath,
-            let eSoundPath = soundPath.eSoundPath,
-            let dSoundPath = soundPath.dSoundPath,
-            let cSoundPath = soundPath.cSoundPath,
-            let bSoundPath = soundPath.bSoundPath,
-            let ASoundPath = soundPath.ASoundPath else { print("error getting soundsFilePath"); return }
+        guard let gSoundPath = sound.gSoundPath,
+            let fSoundPath = sound.fSoundPath,
+            let eSoundPath = sound.eSoundPath,
+            let dSoundPath = sound.dSoundPath,
+            let cSoundPath = sound.cSoundPath,
+            let bSoundPath = sound.bSoundPath,
+            let ASoundPath = sound.ASoundPath else { print("error getting soundsFilePath"); return }
         
         let soundsArray = [ASoundPath,bSoundPath,cSoundPath,dSoundPath,eSoundPath,fSoundPath,gSoundPath]
         
-        let randomSoundPath = soundsArray[noteIndex]
+        let soundPath = soundsArray[noteIndex]
         
         do {
-            try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: randomSoundPath) as URL)
+            try soundPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: soundPath) as URL, fileTypeHint: "wav")
             soundPlayer.play()
         } catch {}
         
     }
     
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //MARK: - Random Sounds
     
     mutating func callHardRandomSound(){
-        var soundPlayer:AVAudioPlayer = AVAudioPlayer()
-
         
-        guard let gSoundPath = soundPath.gSoundPath,
-            let gSharpPath = soundPath.gSharpPath,
-            let fSharpPath = soundPath.fSharpPath,
-            let fSoundPath = soundPath.fSoundPath,
-            let eFlatSoundPath = soundPath.eFlatSoundPath,
-            let eSoundPath = soundPath.eSoundPath,
-            let dSoundPath = soundPath.dSoundPath,
-            let cSoundPath = soundPath.cSoundPath,
-            let cSharpPath = soundPath.cSharpPath,
-            let bFlatPath = soundPath.bFlatPath,
-            let bSoundPath = soundPath.bSoundPath,
-            let ASoundPath = soundPath.ASoundPath else { print("error getting soundsFilePath"); return }
+        guard let gSoundPath = sound.gSoundPath,
+            let gSharpPath = sound.gSharpPath,
+            let fSharpPath = sound.fSharpPath,
+            let fSoundPath = sound.fSoundPath,
+            let eFlatSoundPath = sound.eFlatSoundPath,
+            let eSoundPath = sound.eSoundPath,
+            let dSoundPath = sound.dSoundPath,
+            let cSoundPath = sound.cSoundPath,
+            let cSharpPath = sound.cSharpPath,
+            let bFlatPath = sound.bFlatPath,
+            let bSoundPath = sound.bSoundPath,
+            let ASoundPath = sound.ASoundPath else { print("error getting soundsFilePath"); return }
         
         let soundsArray = [gSoundPath,gSharpPath,fSharpPath,fSoundPath,eFlatSoundPath,eSoundPath,dSoundPath,cSoundPath,cSharpPath,bFlatPath,bSoundPath,ASoundPath]
         
